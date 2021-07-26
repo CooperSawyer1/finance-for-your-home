@@ -1,9 +1,30 @@
 import React from "react"
-// import { CircleChart } from "playbook-ui"
+import { CircleChart } from "playbook-ui"
 
-const CircleChartOfTransactions = ({ transactions }) => (
+const dataWithLegend = [{
+  name: 'Bugs',
+  value: 8,
+
+},
+{
+  name: 'Chores',
+  value: 1,
+
+},
+{
+  name: 'Stories',
+  value: 12,
+},
+]
+
+const CircleChartOfTransactions = ({ props }) => (
   <div>
-    <h1> Chart Time! </h1>
+    <CircleChart
+        chartData={dataWithLegend}
+        id="with-legend-example"
+        legend
+        {...props.category}
+    />
   </div>
 )
 
