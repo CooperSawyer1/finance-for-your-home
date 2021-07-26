@@ -1,0 +1,67 @@
+{
+  "transactions": [
+    {
+      "id": 0,
+      "date": "7/12/2020",
+      "description": "Dinner at chez Cooper",
+      "amount": 56.42,
+      "category": "Restaurant"
+    },
+    {
+      "id": 1,
+      "date": "7/12/2020",
+      "description": "Regular Groceries",
+      "amount": 22.34,
+      "category": "Groceries"
+    },
+    {
+      "id": 2,
+      "date": "7/12/2020",
+      "description": "Pay Check",
+      "amount": 1234123.22,
+      "category": "Income"
+    },
+    {
+      "id": 3,
+      "date": "7/12/2020",
+      "description": "Mortgage Payment",
+      "amount": 1234.45,
+      "category": "Housing"
+    },
+    {
+      "id": 4,
+      "date": "7/12/2020",
+      "description": "Car Payment",
+      "amount": 345.23,
+      "category": "Automobile"
+    },
+    {
+      "id": 5,
+      "date": "7/12/2020",
+      "description": "Gym Membership",
+      "amount": 11.23,
+      "category": "Miscellaneous"
+    },
+    {
+      "date": "07/22/2021",
+      "description": "Groceries",
+      "amount": "123.12",
+      "category": "Groceries",
+      "id": 6
+    },
+    {
+      "date": "07/20/2021",
+      "description": "Books",
+      "amount": "35",
+      "category": "Miscellaneous",
+      "id": 7
+    },
+    {
+      "date": "07/22/2021",
+      "description": "Insurance",
+      "amount": "122.21",
+      "category": "Car",
+      "id": 8
+    }
+  ]
+}
