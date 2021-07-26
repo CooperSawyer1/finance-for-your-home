@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom"
 import NavBar from "./NavBar"
 import AddTransaction from "./AddTransaction"
 import TransactionTracker from "./TransactionTracker"
-import CircleChartOfTransactions from "./CircleChartOfTransactions"
+import BarGraphOfTransactions from "./BarGraphOfTransactions"
 
 const URL = "http://localhost:4000/transactions"
 function App() {
@@ -51,9 +51,8 @@ function App() {
           transactions={transactions}
       />
        </Route>
-      <Route path ="/circleChartOfTransactions">
-        <CircleChartOfTransactions
-        
+      <Route exact path ="/barGraphOfTransactions">
+        <BarGraphOfTransactions 
         />
       </Route>
     </Switch>

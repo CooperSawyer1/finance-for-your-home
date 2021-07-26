@@ -6,7 +6,7 @@ const NavBar = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/addTransaction">Add New Transaction</NavLink>
         <NavLink to="/transactionTracker">Track your Transactions</NavLink>
-        <NavLink to="/circleChartOfTransactions">See your Habits</NavLink>
+        <NavLink to="/barGraphOfTransactions">See your Habits</NavLink>
         </div>
     )
 }
