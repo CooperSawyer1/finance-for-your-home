@@ -15,10 +15,10 @@ const chartData = [{
   data: [3227, 878, 999, 780, 1000],
 }, {
   name: "Housing",
-  data: [123, 123, 324, 2312.31, 231.33]
+  data: [123, 123, 324, 1312.31, 231.33]
 }, {
   name: "Miscellaneous",
-  data: [164.34, 12.233, 7654.00, 123.1, 324.33]
+  data: [164.34, 12.233, 654.00, 123.1, 324.33]
 }
 ]
 const BarGraphOfTransactions = (props) => (
@@ -29,7 +29,7 @@ const BarGraphOfTransactions = (props) => (
         chartData={chartData}
         id="bar-test-2"
         legend
-        title="Bar Graph with Legend"
+        title="History of Transactions"
         xAxisCategories={['Jan', 'Feb', 'Mar', 'Apr', 'May']}
         yAxisMin={0}
         {...props}

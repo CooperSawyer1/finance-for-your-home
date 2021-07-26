@@ -2,6 +2,7 @@ import React from "react"
 import { Table } from "playbook-ui"
 import TransactionItem from "./TransactionItem"
 
+
 const Home = ({ transactions }) => {
  
     const listOfLastFiveTransactions = transactions.map(transaction => (
