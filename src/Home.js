@@ -3,15 +3,13 @@ import { Table } from "playbook-ui"
 import TransactionItem from "./TransactionItem"
 
 
-const Home = ({ transactions }) => {
+const Home = ({ transactions, handleDelete }) => {
  
     const listOfLastFiveTransactions = transactions.map(transaction => (
         <TransactionItem 
         key={transaction.id}
-        amount={transaction.amount}
-        category={transaction.category}
-        date={transaction.date}
-        description={transaction.description}
+        transaction={transaction}
+        handleDelete={handleDelete}
         />
     )).slice(1).slice(-5)
 
@@ -28,6 +26,7 @@ const Home = ({ transactions }) => {
                     <th>Description</th>
                     <th>Amount</th>
                     <th>Category</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>

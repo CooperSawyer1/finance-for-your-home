@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 
-const AddTransaction = ({ handleSubmit}) => {
+const AddTransaction = ({ handleSubmit }) => {
     const[formData, setFormData] = useState({
         date:"",
         description:"",
         amount:0,
-        category:""
+        category:"",
+        categoryId:0
     })
 
     const handleSubmitTransaction = (event) => {
@@ -15,8 +16,10 @@ const AddTransaction = ({ handleSubmit}) => {
             date:"",
             description:"",
             amount:0,
-            category:""
+            category:"",
+            categoryId:0
         })
+        alert("You added another transaction")
     }
 
     const handleAddTransaction = (event) => {
@@ -28,12 +31,14 @@ const AddTransaction = ({ handleSubmit}) => {
         <section>
         <form onSubmit={handleSubmitTransaction} >
             <input 
+            className="date"
             type="date"
             name="date" 
             value={formData.date}
             onChange={handleAddTransaction}
             />  
             <input 
+            className="description"
             name="description" 
             placeholder="Add transaction here" 
             value={formData.description}
@@ -41,6 +46,7 @@ const AddTransaction = ({ handleSubmit}) => {
             />
             
             <input 
+            className="amount"
             type="number" 
             name="amount" 
             placeholder="Add amount here"
@@ -49,18 +55,19 @@ const AddTransaction = ({ handleSubmit}) => {
             />
             
             <select 
+            className="category"
             name="category" 
             placeholder="select a category"
             value={formData.category}
             onChange={handleAddTransaction}
             >
-                <option value="">Please Select</option>
-                <option value="Groceries">Groceries</option>
-                <option value="Restaurant">Restaurant</option>
-                <option value="Car">Car</option>
-                <option value="Housing">Housing</option>
-                <option value="Income">Income</option>
-                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="" categoryId="0">Please Select</option>
+                <option value="Groceries" categoryId="1">Groceries</option>
+                <option value="Restaurant" categoryId="2">Restaurant</option>
+                <option value="Car" categoryId="3">Car</option>
+                <option value="Housing" categoryId="4">Housing</option>
+                <option value="Income" categoryId="5">Income</option>
+                <option value="Miscellaneous" categoryId="6">Miscellaneous</option>
             </select>
         <input type="submit" value="Submit" />
         </form>

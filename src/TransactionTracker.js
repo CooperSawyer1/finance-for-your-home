@@ -2,14 +2,12 @@ import React from "react"
 import TransactionItem from "./TransactionItem"
 import { Table } from "playbook-ui"
 
-const TransactionTracker = ({ transactions }) => {
+const TransactionTracker = ({ transactions, handleDelete }) => {
     const listOfTransactions = transactions.map(transaction => (
         <TransactionItem 
         key={transaction.id}
-        amount={transaction.amount}
-        category={transaction.category}
-        date={transaction.date}
-        description={transaction.description}
+        transaction={transaction}
+        handleDelete={handleDelete}
         />
     ))
 
@@ -24,6 +22,7 @@ const TransactionTracker = ({ transactions }) => {
                     <th>Description</th>
                     <th>Amount</th>
                     <th>Category</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>

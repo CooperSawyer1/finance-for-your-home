@@ -8,32 +8,11 @@
       "category": "Restaurant"
     },
     {
-      "id": 1,
-      "date": "7/12/2020",
-      "description": "Regular Groceries",
-      "amount": 22.34,
-      "category": "Groceries"
-    },
-    {
       "id": 2,
       "date": "7/12/2020",
       "description": "Pay Check",
       "amount": 1234123.22,
       "category": "Income"
-    },
-    {
-      "id": 3,
-      "date": "7/12/2020",
-      "description": "Mortgage Payment",
-      "amount": 1234.45,
-      "category": "Housing"
-    },
-    {
-      "id": 4,
-      "date": "7/12/2020",
-      "description": "Car Payment",
-      "amount": 345.23,
-      "category": "Automobile"
     },
     {
       "id": 5,
@@ -50,32 +29,46 @@
       "id": 6
     },
     {
-      "date": "07/20/2021",
-      "description": "Books",
-      "amount": "35",
-      "category": "Miscellaneous",
-      "id": 7
+      "date": "2021-07-22",
+      "description": "chicken wings",
+      "amount": "7",
+      "category": "Restaurant",
+      "id": 12
     },
     {
-      "date": "07/22/2021",
-      "description": "Insurance",
-      "amount": "122.21",
+      "date": "2021-07-12",
+      "description": "horse hoof",
+      "amount": 32,
       "category": "Car",
-      "id": 8
+      "id": 13
     },
     {
-      "date": "2021-07-25",
-      "description": "Babby foods",
-      "amount": "123.2",
-      "category": "Groceries",
-      "id": 9
+      "date": "2021-07-15",
+      "description": "Dongle",
+      "amount": "394",
+      "category": "Housing",
+      "id": 14
+    },
+    {
+      "date": "2021-07-29",
+      "description": "bowl of soup",
+      "amount": "12.43",
+      "category": "Restaurant",
+      "id": 15
+    },
+    {
+      "date": "2021-07-14",
+      "description": "chicken wings",
+      "amount": "-2",
+      "category": "Miscellaneous",
+      "id": 16
     },
     {
       "date": "2021-07-13",
-      "description": "Primal Meats",
-      "amount": "75.00",
-      "category": "Groceries",
-      "id": 10
+      "description": "3452",
+      "amount": "0345",
+      "category": "Income",
+      "id": 17
     }
   ]
 }

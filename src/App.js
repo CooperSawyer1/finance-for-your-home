@@ -5,21 +5,24 @@ import { Route, Switch } from "react-router-dom"
 import NavBar from "./NavBar"
 import AddTransaction from "./AddTransaction"
 import TransactionTracker from "./TransactionTracker"
-import BarGraphOfTransactions from "./BarGraphOfTransactions"
+import CircleChartWithLegendKit from "./CircleChartWithLegendKit"
 
-const URL = "http://localhost:4000/transactions"
+
+const transactionURL = "http://localhost:4000/transactions"
+// const categoryURL = "http://localhost:4000/categories"
+
 function App() {
   
   const [transactions, setTransactions] = useState([])
 
   useEffect (() => {
-    fetch(URL)
+    fetch(transactionURL)
     .then(response => response.json())
     .then(data => setTransactions(data))
   }, [])
 
   const handleSubmit = (newTransaction) => {
-    fetch(URL, {
+    fetch(transactionURL, {
       method: "POST",
       headers: {"Content-Type": "application/json"
     },
@@ -27,19 +30,29 @@ function App() {
       date: newTransaction.date,
       description: newTransaction.description,
       amount: newTransaction.amount,
-      category: newTransaction.category
+      category: newTransaction.category,
+      categoryId: newTransaction.categoryId
       })
     })
       .then(response => response.json())
       .then(data => setTransactions([...transactions, data]))
+
   }
 
-  return <div>
+  const handleDelete = (id) => {
+    const updatedTransactions = transactions.filter(transaction => transaction.id !== id)
+    setTransactions(updatedTransactions)
+  }
+
+  
+
+  return <div className="App">
     <NavBar />
     <Switch>
       <Route exact path="/">
       <Home 
       transactions={transactions}
+      handleDelete={handleDelete}
       />
       </Route>
       <Route exact path="/addtransaction">
@@ -49,10 +62,12 @@ function App() {
       <Route exact path="/transactionTracker">
       <TransactionTracker 
           transactions={transactions}
+          handleDelete={handleDelete}
       />
        </Route>
-      <Route exact path ="/barGraphOfTransactions">
-        <BarGraphOfTransactions 
+      <Route path ="/circleChartWithLegendKit">
+        <CircleChartWithLegendKit 
+        transactions={transactions}
         />
       </Route>
     </Switch>
