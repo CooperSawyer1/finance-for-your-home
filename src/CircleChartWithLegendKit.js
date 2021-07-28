@@ -1,55 +1,49 @@
-import React from 'react';
-import { Pie } from 'react-chartjs-2';
+import React from "react"
+import { Doughnut } from "react-chartjs-2"
 
+const CircleChartWithLegendKit = ({ transactions }) => {
+  const totals = {
+    Groceries: 0,
+    Restaurant: 0,
+    Housing: 0,
+    Miscellaneous: 0,
+    Car: 0,
+    Income: 0
+  }
 
-  const CircleChartWithLegendKit = ({ transactions }) => {
+  transactions.forEach(transaction => {
+    totals[transaction.category] += transaction.amount
+  })
 
-    const totals = {
-      "Groceries": 0,
-      "Restaurant": 0,
-      "Housing": 0,
-      "Miscellaneous": 0,
-      "Car": 0,
-      "Income": 0
-    }
-
-    transactions.forEach(transaction => {
-      totals[transaction.category] += transaction.amount
-    })
-
-    const dataSet = {
-      labels: Object.keys(totals),
-      datasets: [
-        { 
-          backgroundColor: [
-            "#B21F00",
-            "#C9DE00",
-            "#2FDE00",
-            "#00A6B4",
-            "#6800B4",
-            "#4134"
+  const dataSet = {
+    labels: Object.keys(totals),
+    datasets: [
+      {
+        backgroundColor: [
+          "#F66D44",
+          "#FEAE65",
+          "#E6F69D",
+          "#AADEA7",
+          "#64C2A6",
+          "#2D87BB"
         ],
-          data: Object.values(totals)
-        }
-      ]
-    }
-    
-    return (
-      <div className="pie-chart">
-        <Pie
+        data: Object.values(totals)
+      }
+    ]
+  }
+
+  return (
+      <div>
+        <Doughnut
           data={dataSet}
-          height={500}
-          width={500}
+          height={400}
+          width={400}
           options={{
-            legend:{
-              display:true,
-              position:'right'
-            },
             maintainAspectRatio: false
           }}
         />
       </div>
-    );
-  }
+  )
+}
 
-export default CircleChartWithLegendKit 
+export default CircleChartWithLegendKit

@@ -3,21 +3,21 @@ import TransactionItem from "./TransactionItem"
 import { Table } from "playbook-ui"
 
 const TransactionTracker = ({ transactions, handleDelete }) => {
-    const listOfTransactions = transactions.map(transaction => (
-        <TransactionItem 
+  const listOfTransactions = transactions.map(transaction => (
+        <TransactionItem
         key={transaction.id}
         transaction={transaction}
         handleDelete={handleDelete}
         />
-    ))
+  ))
 
-    return (
+  return (
     <div>
         <h2>List of Transactions</h2>
         <Table
          size="md">
-            <thead>
-                <tr>
+            <thead className="tableHeader">
+                <tr className="transaction">
                     <th>Date</th>
                     <th>Description</th>
                     <th>Amount</th>
@@ -31,8 +31,7 @@ const TransactionTracker = ({ transactions, handleDelete }) => {
         </Table>
     </div>
 
-
-    )
+  )
 }
 
 export default TransactionTracker

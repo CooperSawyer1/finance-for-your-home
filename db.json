@@ -2,27 +2,27 @@
   "transactions": [
     {
       "id": 0,
-      "date": "7/12/2020",
+      "date": "2021-07-17",
       "description": "Dinner at chez Cooper",
       "amount": 13,
       "category": "Restaurant"
     },
     {
       "id": 2,
-      "date": "7/12/2020",
+      "date": "2021-07-17",
       "description": "Pay Check",
       "amount": 12,
       "category": "Income"
     },
     {
       "id": 5,
-      "date": "7/12/2020",
+      "date": "2021-07-11",
       "description": "Gym Membership",
       "amount": 11,
       "category": "Miscellaneous"
     },
     {
-      "date": "07/22/2021",
+      "date": "2021-07-15",
       "description": "Groceries",
       "amount": 15.12,
       "category": "Groceries",
@@ -77,6 +77,20 @@
       "amount": 16,
       "category": "Miscellaneous",
       "id": 19
+    },
+    {
+      "date": "2021-07-18",
+      "description": "twitter",
+      "amount": 46.77,
+      "category": "Car",
+      "id": 20
+    },
+    {
+      "date": "2021-07-18",
+      "description": "Brakes",
+      "amount": 234.22,
+      "category": "Car",
+      "id": 21
     }
   ]
 }

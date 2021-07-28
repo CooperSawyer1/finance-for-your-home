@@ -1,62 +1,63 @@
 import React, { useState } from "react"
 
 const AddTransaction = ({ handleSubmit }) => {
-    const[formData, setFormData] = useState({
-        date:"",
-        description:"",
-        amount:"",
-        category:""
+  const [formData, setFormData] = useState({
+    date: "",
+    description: "",
+    amount: "",
+    category: ""
+  })
+
+  const handleSubmitTransaction = (event) => {
+    event.preventDefault()
+    handleSubmit({ ...formData, amount: parseFloat(formData.amount) })
+    setFormData({
+      date: "",
+      description: "",
+      amount: "",
+      category: ""
     })
+    alert("You added another transaction")
+  }
 
-    const handleSubmitTransaction = (event) => {
-        event.preventDefault()
-        handleSubmit({...formData, amount: parseFloat(formData.amount)})
-        setFormData({
-            date:"",
-            description:"",
-            amount:"",
-            category:""
-        })
-        alert("You added another transaction")
-    }
+  const handleAddTransaction = (event) => {
+    setFormData({
+      ...formData, [event.target.name]: (event.target.value)
+    })
+  }
 
-    const handleAddTransaction = (event) => {
-        setFormData({
-            ...formData, [event.target.name] : (event.target.value)
-        })}
-
-    return (
-        <div>
+  return (
+        <div className="inputForm">
             <h2>Add a New Transaction Below</h2>
         <section>
-        <form onSubmit={handleSubmitTransaction} className="form">
-            <input 
+        <form className="transactionForm" onSubmit={handleSubmitTransaction}>
+            <input
             className="date"
             type="date"
-            name="date" 
+            name="date"
             value={formData.date}
             onChange={handleAddTransaction}
-            />  
-            <input 
+            />
+            <input
             className="description"
-            name="description" 
-            placeholder="Add transaction here" 
+            name="description"
+            placeholder="Add transaction here"
             value={formData.description}
             onChange={handleAddTransaction}
             />
-            
-            <input 
+
+            <input
             className="amount"
-            type="number" 
-            name="amount" 
+            type="amount"
+            name="amount"
             placeholder="Add amount here"
             value={formData.amount}
             onChange={handleAddTransaction}
             />
-            
-            <select 
+
+            <select
             className="category"
-            name="category" 
+            name="category"
             placeholder="select a category"
             value={formData.category}
             onChange={handleAddTransaction}
@@ -69,11 +70,11 @@ const AddTransaction = ({ handleSubmit }) => {
                 <option value="Income">Income</option>
                 <option value="Miscellaneous">Miscellaneous</option>
             </select>
-        <input type="submit" value="Submit" />
+        <input className="submit" type="submit" value="Submit"/>
         </form>
         </section>
         </div>
-        )
+  )
 }
 
 export default AddTransaction
