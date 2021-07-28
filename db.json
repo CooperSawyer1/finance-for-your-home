@@ -4,71 +4,79 @@
       "id": 0,
       "date": "7/12/2020",
       "description": "Dinner at chez Cooper",
-      "amount": 56.42,
+      "amount": 13,
       "category": "Restaurant"
     },
     {
       "id": 2,
       "date": "7/12/2020",
       "description": "Pay Check",
-      "amount": 1234123.22,
+      "amount": 12,
       "category": "Income"
     },
     {
       "id": 5,
       "date": "7/12/2020",
       "description": "Gym Membership",
-      "amount": 11.23,
+      "amount": 11,
       "category": "Miscellaneous"
     },
     {
       "date": "07/22/2021",
       "description": "Groceries",
-      "amount": "123.12",
+      "amount": 15.12,
       "category": "Groceries",
       "id": 6
     },
     {
       "date": "2021-07-22",
       "description": "chicken wings",
-      "amount": "7",
+      "amount": 7,
       "category": "Restaurant",
       "id": 12
     },
     {
       "date": "2021-07-12",
       "description": "horse hoof",
-      "amount": 32,
+      "amount": 13,
       "category": "Car",
+      "color": "#6800B4",
       "id": 13
     },
     {
       "date": "2021-07-15",
       "description": "Dongle",
-      "amount": "394",
+      "amount": 24,
       "category": "Housing",
       "id": 14
     },
     {
       "date": "2021-07-29",
       "description": "bowl of soup",
-      "amount": "12.43",
+      "amount": 12,
       "category": "Restaurant",
       "id": 15
     },
     {
       "date": "2021-07-14",
       "description": "chicken wings",
-      "amount": "-2",
+      "amount": 12,
       "category": "Miscellaneous",
       "id": 16
     },
     {
       "date": "2021-07-13",
       "description": "3452",
-      "amount": "0345",
+      "amount": 5,
       "category": "Income",
       "id": 17
+    },
+    {
+      "date": "2021-07-19",
+      "description": "clothes",
+      "amount": 16,
+      "category": "Miscellaneous",
+      "id": 19
     }
   ]
 }

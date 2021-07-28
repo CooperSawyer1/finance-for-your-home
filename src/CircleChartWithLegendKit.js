@@ -3,22 +3,24 @@ import { Pie } from 'react-chartjs-2';
 
 
   const CircleChartWithLegendKit = ({ transactions }) => {
-    
-    // const groceries = transactions.forEach(element => {
-    //   if (element.category === "groceries")
-    //   return (
-    //     transactions.amount
-    //     )  
-    // })
-       
-  
-        
-        
+
+    const totals = {
+      "Groceries": 0,
+      "Restaurant": 0,
+      "Housing": 0,
+      "Miscellaneous": 0,
+      "Car": 0,
+      "Income": 0
+    }
+
+    transactions.forEach(transaction => {
+      totals[transaction.category] += transaction.amount
+    })
+
     const dataSet = {
-      labels: ["Groceries", "Car", "Insurance",
-               "Miscellaneous", "Restaurant", "Housing"],
+      labels: Object.keys(totals),
       datasets: [
-        {
+        { 
           backgroundColor: [
             "#B21F00",
             "#C9DE00",
@@ -26,13 +28,12 @@ import { Pie } from 'react-chartjs-2';
             "#00A6B4",
             "#6800B4",
             "#4134"
-          ],
-          data: [12, 12, 23, 21, 32, 43],
+        ],
+          data: Object.values(totals)
         }
       ]
     }
     
-
     return (
       <div className="pie-chart">
         <Pie

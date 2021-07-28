@@ -9,7 +9,6 @@ import CircleChartWithLegendKit from "./CircleChartWithLegendKit"
 
 
 const transactionURL = "http://localhost:4000/transactions"
-// const categoryURL = "http://localhost:4000/categories"
 
 function App() {
   
