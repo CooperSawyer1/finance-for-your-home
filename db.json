@@ -40,7 +40,6 @@
       "description": "horse hoof",
       "amount": 13,
       "category": "Car",
-      "color": "#6800B4",
       "id": 13
     },
     {
@@ -65,13 +64,6 @@
       "id": 16
     },
     {
-      "date": "2021-07-13",
-      "description": "3452",
-      "amount": 5,
-      "category": "Income",
-      "id": 17
-    },
-    {
       "date": "2021-07-19",
       "description": "clothes",
       "amount": 16,
@@ -88,7 +80,7 @@
     {
       "date": "2021-07-18",
       "description": "Brakes",
-      "amount": 234.22,
+      "amount": 132.22,
       "category": "Car",
       "id": 21
     }

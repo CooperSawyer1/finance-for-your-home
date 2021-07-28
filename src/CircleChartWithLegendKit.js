@@ -36,11 +36,10 @@ const CircleChartWithLegendKit = ({ transactions }) => {
       <div>
         <Doughnut
           data={dataSet}
-          height={400}
-          width={400}
           options={{
-            maintainAspectRatio: false
-          }}
+            radius: 250
+          }
+        }
         />
       </div>
   )
