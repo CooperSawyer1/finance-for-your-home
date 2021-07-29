@@ -32,31 +32,27 @@ const AddTransaction = ({ handleSubmit }) => {
         <section>
         <form className="transactionForm" onSubmit={handleSubmitTransaction}>
             <input
-            className="date"
             type="date"
             name="date"
             value={formData.date}
             onChange={handleAddTransaction}
             />
             <input
-            className="description"
             name="description"
-            placeholder="Add transaction here"
+            placeholder="Add Description Here"
             value={formData.description}
             onChange={handleAddTransaction}
             />
 
             <input
-            className="amount"
             type="amount"
             name="amount"
-            placeholder="Add amount here"
+            placeholder="Add Amount Here"
             value={formData.amount}
             onChange={handleAddTransaction}
             />
 
             <select
-            className="category"
             name="category"
             placeholder="select a category"
             value={formData.category}
@@ -67,8 +63,9 @@ const AddTransaction = ({ handleSubmit }) => {
                 <option value="Restaurant">Restaurant</option>
                 <option value="Car">Car</option>
                 <option value="Housing">Housing</option>
-                <option value="Income">Income</option>
+                <option value="Utilities">Utilities</option>
                 <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Entertainment">Entertainment</option>
             </select>
         <input className="submit" type="submit" value="Submit"/>
         </form>

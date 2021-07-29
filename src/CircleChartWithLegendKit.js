@@ -8,7 +8,8 @@ const CircleChartWithLegendKit = ({ transactions }) => {
     Housing: 0,
     Miscellaneous: 0,
     Car: 0,
-    Income: 0
+    Utilities: 0,
+    Entertainment: 0
   }
 
   transactions.forEach(transaction => {
@@ -25,7 +26,8 @@ const CircleChartWithLegendKit = ({ transactions }) => {
           "#E6F69D",
           "#AADEA7",
           "#64C2A6",
-          "#2D87BB"
+          "#03fcd7",
+          "#0384fc"
         ],
         data: Object.values(totals)
       }
@@ -34,6 +36,7 @@ const CircleChartWithLegendKit = ({ transactions }) => {
 
   return (
       <div>
+         <h2>Your Monthly Totals:</h2>
         <Doughnut
           data={dataSet}
           options={{

@@ -60,35 +60,11 @@ h1 {
     margin: 1.5%
 }
 
-.category {
-    display: inline-block;
-    text-align: center;
-    font-family: Georgia;
-    margin: 1.5%;
-    border-radius: 20px;
-    border: 2px solid;
-}
-
-.amount {
+input {
     display: inline-block;
     text-align: left;
     font-family: Georgia;
     margin: 1.5%;
-}
-
-.description {
-    display: inline-block;
-    text-align: left;
-    font-family: Georgia;
-    margin: 1.5%
-}
-
-.date {
-    display: inline-block;
-    text-align: left;
-    font-family: Georgia;
-    margin: 1.5%;
-    
 }
 
 .inputForm {
@@ -98,14 +74,3 @@ h1 {
 .transactionForm {
     display: inline-block;
 }
-
-.Login {
-      padding: 25px 0;
-}
-  
-.Login form {
-      margin: 0 auto;
-      max-width: 320px;
-}
-
-  
