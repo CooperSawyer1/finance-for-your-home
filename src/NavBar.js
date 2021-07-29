@@ -8,6 +8,7 @@ const NavBar = () => {
         <NavLink to="/addTransaction"><button className="navButton">Add New Transaction</button></NavLink>
         <NavLink to="/transactionTracker"><button className="navButton">Track Your Transactions</button></NavLink>
         <NavLink to="/circleChartWithLegendKit"><button className="navButton">See Your Spending Habits</button></NavLink>
+        {/* <NavLink to="/signup"><button className="navButton">SignUp</button></NavLink> */}
         </div>
   )
 }

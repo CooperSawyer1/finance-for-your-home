@@ -84,5 +84,12 @@
       "category": "Car",
       "id": 21
     }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "userName": "repooc",
+      "password": "itsgoingdown"
+    }
   ]
 }

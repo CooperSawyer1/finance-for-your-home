@@ -6,11 +6,14 @@ import NavBar from "./NavBar"
 import AddTransaction from "./AddTransaction"
 import TransactionTracker from "./TransactionTracker"
 import CircleChartWithLegendKit from "./CircleChartWithLegendKit"
+import SignUp from "./SignUp"
 
 const transactionURL = "http://localhost:4000/transactions"
+const usersURL = "http://localhost:4000/users"
 
 function App () {
   const [transactions, setTransactions] = useState([])
+  const [newUsers, setNewUsers] = useState([])
 
   useEffect(() => {
     fetch(transactionURL)
@@ -18,21 +21,38 @@ function App () {
       .then(data => setTransactions(data))
   }, [])
 
-  const handleSubmit = (newTransaction) => {
-    fetch(transactionURL, {
+  // const handleSubmit = (newTransaction) => {
+  //   fetch(transactionURL, {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       date: newTransaction.date,
+  //       description: newTransaction.description,
+  //       amount: newTransaction.amount,
+  //       category: newTransaction.category,
+  //       categoryId: newTransaction.categoryId
+  //     })
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => setTransactions([...transactions, data]))
+  // }
+
+  const handleLoginSubmit = (newUser) => {
+    fetch(usersURL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        date: newTransaction.date,
-        description: newTransaction.description,
-        amount: newTransaction.amount,
-        category: newTransaction.category,
-        categoryId: newTransaction.categoryId
+        userName: newUser.userName,
+        password: newUser.password
       })
     })
       .then(response => response.json())
-      .then(data => setTransactions([...transactions, data]))
+      .then(data => setNewUsers([...newUsers, data]))
   }
+
+  <SignUp
+  handleLoginSubmit={handleLoginSubmit}
+  />
 
   const handleDelete = (id) => {
     const updatedTransactions = transactions.filter(transaction => transaction.id !== id)
@@ -43,17 +63,18 @@ function App () {
     <NavBar />
     <Switch>
       <Route exact path="/">
-      <Home
+        <Home
       transactions={transactions}
       handleDelete={handleDelete}
       />
       </Route>
       <Route exact path="/addtransaction">
-       <AddTransaction
-       handleSubmit={handleSubmit}/>
-      </Route>
+        <AddTransaction
+      //  handleSubmit={handleSubmit}
+      />
+       </Route>
       <Route exact path="/transactionTracker">
-      <TransactionTracker
+        <TransactionTracker
           transactions={transactions}
           handleDelete={handleDelete}
       />
