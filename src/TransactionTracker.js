@@ -2,7 +2,7 @@ import React from "react"
 import TransactionItem from "./TransactionItem"
 import { Table } from "playbook-ui"
 
-const TransactionTracker = ({ transactions, handleDelete }) => {
+const TransactionTracker = ({ transactions, handleDelete, handleSortCategory }) => {
   const listOfTransactions = transactions.map(transaction => (
         <TransactionItem
         key={transaction.id}
@@ -10,6 +10,10 @@ const TransactionTracker = ({ transactions, handleDelete }) => {
         handleDelete={handleDelete}
         />
   ))
+
+  const handleClick = () => {
+    return handleSortCategory
+  }
 
   return (
     <div>
@@ -21,7 +25,7 @@ const TransactionTracker = ({ transactions, handleDelete }) => {
                     <th>Date</th>
                     <th>Description</th>
                     <th>Amount</th>
-                    <th>Category</th>
+                    <th onClick={handleClick}>Category</th>
                     <th>Delete</th>
                 </tr>
             </thead>

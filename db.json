@@ -78,13 +78,6 @@
       "id": 21
     },
     {
-      "date": "2021-07-26",
-      "description": "bed",
-      "amount": 2344,
-      "category": "Housing",
-      "id": 22
-    },
-    {
       "date": "2021-07-31",
       "description": "76ers Tickets",
       "amount": 1000,
@@ -97,6 +90,13 @@
       "amount": 76.75,
       "category": "Miscellaneous",
       "id": 24
+    },
+    {
+      "date": "2021-07-13",
+      "description": "Car parts",
+      "amount": 345,
+      "category": "Car",
+      "id": 25
     }
   ]
 }
