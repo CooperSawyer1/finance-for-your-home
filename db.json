@@ -4,15 +4,15 @@
       "id": 0,
       "date": "2021-07-17",
       "description": "Dinner at chez Cooper",
-      "amount": 13,
+      "amount": 133,
       "category": "Restaurant"
     },
     {
       "id": 2,
       "date": "2021-07-17",
       "description": "Pay Check",
-      "amount": 12,
-      "category": "Income"
+      "amount": 124,
+      "category": "Utilities"
     },
     {
       "id": 5,
@@ -24,48 +24,41 @@
     {
       "date": "2021-07-15",
       "description": "Groceries",
-      "amount": 15.12,
+      "amount": 155.5,
       "category": "Groceries",
       "id": 6
     },
     {
       "date": "2021-07-22",
       "description": "chicken wings",
-      "amount": 7,
+      "amount": 71,
       "category": "Restaurant",
       "id": 12
     },
     {
       "date": "2021-07-12",
       "description": "horse hoof",
-      "amount": 13,
+      "amount": 133,
       "category": "Car",
       "id": 13
     },
     {
-      "date": "2021-07-15",
-      "description": "Dongle",
-      "amount": 24,
-      "category": "Housing",
-      "id": 14
-    },
-    {
       "date": "2021-07-29",
       "description": "bowl of soup",
-      "amount": 12,
+      "amount": 12.5,
       "category": "Restaurant",
       "id": 15
     },
     {
       "date": "2021-07-14",
       "description": "chicken wings",
-      "amount": 12,
+      "amount": 165.5,
       "category": "Miscellaneous",
       "id": 16
     },
     {
       "date": "2021-07-19",
-      "description": "clothes",
+      "description": "Clothes",
       "amount": 16,
       "category": "Miscellaneous",
       "id": 19
@@ -83,6 +76,20 @@
       "amount": 132.22,
       "category": "Car",
       "id": 21
+    },
+    {
+      "date": "2021-07-26",
+      "description": "bed",
+      "amount": 2344,
+      "category": "Housing",
+      "id": 22
+    },
+    {
+      "date": "2021-07-31",
+      "description": "76ers Tickets",
+      "amount": 1000,
+      "category": "Entertainment",
+      "id": 23
     }
   ],
   "users": [
@@ -90,6 +97,31 @@
       "id": 0,
       "userName": "repooc",
       "password": "itsgoingdown"
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 5
     }
   ]
 }
