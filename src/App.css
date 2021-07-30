@@ -74,3 +74,7 @@ input {
 .transactionForm {
     display: inline-block;
 }
+
+.transaction {
+    background-color:rgba(6, 154, 18, 0.845);
+}

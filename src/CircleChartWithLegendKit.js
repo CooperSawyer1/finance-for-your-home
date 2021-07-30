@@ -36,7 +36,7 @@ const CircleChartWithLegendKit = ({ transactions }) => {
 
   return (
       <div>
-         <h2>Your Monthly Totals:</h2>
+         <h2>Your Totals:</h2>
         <Doughnut
           data={dataSet}
           options={{
