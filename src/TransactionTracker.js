@@ -11,10 +11,6 @@ const TransactionTracker = ({ transactions, handleDelete, handleSortCategory }) 
         />
   ))
 
-  const handleClick = () => {
-    return handleSortCategory
-  }
-
   return (
     <div>
         <h2>List of Transactions</h2>
@@ -25,7 +21,7 @@ const TransactionTracker = ({ transactions, handleDelete, handleSortCategory }) 
                     <th>Date</th>
                     <th>Description</th>
                     <th>Amount</th>
-                    <th onClick={handleClick}>Category</th>
+                    <th>Category</th>
                     <th>Delete</th>
                 </tr>
             </thead>

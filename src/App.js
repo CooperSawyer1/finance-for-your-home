@@ -5,13 +5,13 @@ import { Route, Switch } from "react-router-dom"
 import NavBar from "./NavBar"
 import AddTransaction from "./AddTransaction"
 import TransactionTracker from "./TransactionTracker"
-import CircleChartWithLegendKit from "./CircleChartWithLegendKit"
+import SpendingHabits from "./SpendingHabits"
 
 const transactionURL = `${process.env.REACT_APP_API_URL}/transactions`
 
 function App () {
   const [transactions, setTransactions] = useState([])
-  // const [sortCategory, setSortCategory] = useState([])
+
   useEffect(() => {
     fetch(transactionURL)
       .then(response => response.json())
@@ -39,14 +39,6 @@ function App () {
     setTransactions(updatedTransactions)
   }
 
-  const byCategory = transactions.slice(0)
-  byCategory.sort(
-    function (a, b) {
-      const x = a.category.toLowerCase()
-      const y = b.category.toLowerCase()
-      return x < y ? -1 : x > y ? 1 : 0
-    })
-
   return <div className="App">
     <NavBar />
     <Switch>
@@ -65,11 +57,10 @@ function App () {
         <TransactionTracker
           transactions={transactions}
           handleDelete={handleDelete}
-          handleSortCategory={byCategory}
         />
        </Route>
-      <Route path ="/circleChartWithLegendKit">
-        <CircleChartWithLegendKit
+      <Route exact path ="/spendingHabits">
+        <SpendingHabits
         transactions={transactions}
         />
       </Route>

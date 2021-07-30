@@ -1,7 +1,7 @@
 import React from "react"
 import { Doughnut } from "react-chartjs-2"
 
-const CircleChartWithLegendKit = ({ transactions }) => {
+const SpendingHabits = ({ transactions }) => {
   const totals = {
     Groceries: 0,
     Restaurant: 0,
@@ -48,4 +48,4 @@ const CircleChartWithLegendKit = ({ transactions }) => {
   )
 }
 
-export default CircleChartWithLegendKit
+export default SpendingHabits

@@ -7,7 +7,7 @@ const NavBar = () => {
         <NavLink to="/"><button className="navButton">Home</button></NavLink>
         <NavLink to="/addTransaction"><button className="navButton">Add New Transaction</button></NavLink>
         <NavLink to="/transactionTracker"><button className="navButton">Track Your Transactions</button></NavLink>
-        <NavLink to="/circleChartWithLegendKit"><button className="navButton">See Your Spending Habits</button></NavLink>
+        <NavLink to="/spendingHabits"><button className="navButton">See Your Spending Habits</button></NavLink>
         </div>
   )
 }
