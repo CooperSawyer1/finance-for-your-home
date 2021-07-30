@@ -91,37 +91,5 @@
       "category": "Entertainment",
       "id": 23
     }
-  ],
-  "users": [
-    {
-      "id": 0,
-      "userName": "repooc",
-      "password": "itsgoingdown"
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 1
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 2
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 4
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 5
-    }
   ]
 }
