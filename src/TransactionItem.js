@@ -2,9 +2,10 @@ import React from "react"
 
 const TransactionItem = ({ handleDelete, transaction }) => {
   const { amount, category, date, description, id } = transaction
+  const transactionURL = `${process.env.REACT_APP_API_URL}`
 
   const handleDeleteClick = () => {
-    fetch(`http://localhost:4000/transactions/${id}`, {
+    fetch(`${transactionURL}/transactions/${id}`, {
       method: "DELETE"
     })
       .then(handleDelete(id))

@@ -90,6 +90,13 @@
       "amount": 1000,
       "category": "Entertainment",
       "id": 23
+    },
+    {
+      "date": "2021-07-06",
+      "description": "Dongle",
+      "amount": 76.75,
+      "category": "Miscellaneous",
+      "id": 24
     }
   ]
 }

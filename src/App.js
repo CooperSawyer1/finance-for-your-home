@@ -7,7 +7,7 @@ import AddTransaction from "./AddTransaction"
 import TransactionTracker from "./TransactionTracker"
 import CircleChartWithLegendKit from "./CircleChartWithLegendKit"
 
-const transactionURL = "http://localhost:4000/transactions"
+const transactionURL = `${process.env.REACT_APP_API_URL}/transactions`
 
 function App () {
   const [transactions, setTransactions] = useState([])
